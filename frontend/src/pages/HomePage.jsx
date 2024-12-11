@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useChatStore } from '../store/useChatStore';
 import Sidebar from '../components/Sidebar';
 import NoChatSeleted  from '../components/NoChatSeleted';
-import Chatcontainer from '../components/Chatcontainer';
+import ChatContainer from '../components/ChatContainer';
 const HomePage = () => {
   const {selectedUser} = useChatStore();
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
           <div className="flex h-full rounded-lg overflow-hidden">
             <Sidebar />
 
-            {!selectedUser ? <NoChatSeleted /> : <Chatcontainer />}
+            {!selectedUser ? <NoChatSeleted /> : <ChatContainer/>}
           </div>
         </div>
       </div>
